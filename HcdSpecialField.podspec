@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  仿微信、支付宝支付时输入密码框，摩拜单车输入编号框。
+  HcdSpecialField is a special textField。仿微信、支付宝支付时输入密码框，摩拜单车输入编号框。
                    DESC
 
   s.homepage     = "https://github.com/Jvaeyhcd/HcdSpecialField"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
   s.source       = { :git => "https://github.com/Jvaeyhcd/HcdSpecialField.git", :tag => "#{s.version}" }
-  s.resource_bundle = { 'HcdSpecialField' => 'HcdSpecialField/Resources/*' }
+  # s.resource_bundle = { 'HcdSpecialField' => 'HcdSpecialField/Resources/*' }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
