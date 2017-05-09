@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'HcdSpecialField_Example' do
+  pod 'HcdSpecialField', :path => '../'
+
+end
