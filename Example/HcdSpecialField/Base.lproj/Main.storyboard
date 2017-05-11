@@ -17,6 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="7go-5N-g67">
                                 <cells>
@@ -91,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="689" y="237"/>
         </scene>
-        <!--View Controller-->
+        <!--HcdSpecialField-->
         <scene sceneID="Biz-BG-4ql">
             <objects>
-                <viewController id="uJV-p9-JLE" sceneMemberID="viewController">
+                <viewController id="uJV-p9-JLE" customClass="HcdSepcialFieldViewController" customModule="HcdSpecialField_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DkB-vX-mtj"/>
                         <viewControllerLayoutGuide type="bottom" id="gj1-L3-hrx"/>
@@ -103,8 +104,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter redeem code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNN-Db-zfc">
+                                <rect key="frame" x="16" y="99" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-gq-5xL" customClass="HcdSpecialField" customModule="HcdSpecialField">
-                                <rect key="frame" x="16" y="87" width="286" height="38"/>
+                                <rect key="frame" x="17" y="137" width="286" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -126,16 +134,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UHk-Y4-KfZ"/>
+                    <navigationItem key="navigationItem" title="HcdSpecialField" id="UHk-Y4-KfZ"/>
+                    <connections>
+                        <outlet property="specialField" destination="Mfp-gq-5xL" id="Z6a-1G-vAk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmG-Wa-9Je" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1440.8" y="235.23238380809596"/>
         </scene>
-        <!--View Controller-->
+        <!--HcdPassCodeFiled-->
         <scene sceneID="ASW-iy-20M">
             <objects>
-                <viewController id="5hl-Bx-E2F" sceneMemberID="viewController">
+                <viewController id="5hl-Bx-E2F" customClass="HcdPassCodeFiledViewController" customModule="HcdSpecialField_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mjv-VO-aAZ"/>
                         <viewControllerLayoutGuide type="bottom" id="wrF-ZO-qjc"/>
@@ -144,8 +155,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter your passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g77-rO-d5X">
+                                <rect key="frame" x="16" y="99" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yza-xe-0Uo" customClass="HcdSpecialField" customModule="HcdSpecialField">
-                                <rect key="frame" x="16" y="88" width="286" height="38"/>
+                                <rect key="frame" x="66" y="128" width="189" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
@@ -167,11 +185,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Mjb-vU-EG2"/>
+                    <navigationItem key="navigationItem" title="HcdPassCodeFiled" id="Mjb-vU-EG2"/>
+                    <connections>
+                        <outlet property="passCodeField" destination="Yza-xe-0Uo" id="OeD-up-Tw8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egV-AK-8Sr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1440" y="1032"/>
+            <point key="canvasLocation" x="1440" y="1030.9859154929577"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EB4-Av-TDT">
