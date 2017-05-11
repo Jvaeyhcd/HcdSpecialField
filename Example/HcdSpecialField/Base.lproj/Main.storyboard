@@ -104,17 +104,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter redeem code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNN-Db-zfc">
-                                <rect key="frame" x="16" y="99" width="288" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter redeem code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNN-Db-zfc">
+                                <rect key="frame" x="87" y="99" width="146" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-gq-5xL" customClass="HcdSpecialField" customModule="HcdSpecialField">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-gq-5xL" customClass="HcdSpecialField" customModule="HcdSpecialField">
                                 <rect key="frame" x="17" y="137" width="286" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="O9O-Jh-8JW"/>
+                                    <constraint firstAttribute="width" constant="286" id="pSB-cA-6zP"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="numberOfDigits">
                                         <integer key="value" value="6"/>
@@ -133,6 +135,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mfp-gq-5xL" firstAttribute="top" secondItem="x2H-id-HIe" secondAttribute="top" constant="137" id="BvV-In-mhO"/>
+                            <constraint firstItem="Mfp-gq-5xL" firstAttribute="centerX" secondItem="DNN-Db-zfc" secondAttribute="centerX" id="Eut-vp-w3M"/>
+                            <constraint firstItem="Mfp-gq-5xL" firstAttribute="centerX" secondItem="x2H-id-HIe" secondAttribute="centerX" id="PMM-Ed-c8E"/>
+                            <constraint firstItem="Mfp-gq-5xL" firstAttribute="top" secondItem="DNN-Db-zfc" secondAttribute="bottom" constant="17" id="ajc-6w-nld"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Redeem code" id="UHk-Y4-KfZ"/>
                     <connections>
@@ -155,17 +163,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter your passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g77-rO-d5X">
-                                <rect key="frame" x="16" y="99" width="288" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g77-rO-d5X">
+                                <rect key="frame" x="55" y="99" width="212" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yza-xe-0Uo" customClass="HcdSpecialField" customModule="HcdSpecialField">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yza-xe-0Uo" customClass="HcdSpecialField" customModule="HcdSpecialField">
                                 <rect key="frame" x="66" y="128" width="189" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Qnd-BI-aX2"/>
+                                    <constraint firstAttribute="width" constant="189" id="eYM-p5-Vp3"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="numberOfDigits">
                                         <integer key="value" value="6"/>
@@ -184,6 +194,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g77-rO-d5X" firstAttribute="top" secondItem="Mjv-VO-aAZ" secondAttribute="bottom" constant="35" id="7fb-zC-PBR"/>
+                            <constraint firstItem="Yza-xe-0Uo" firstAttribute="centerX" secondItem="g77-rO-d5X" secondAttribute="centerX" id="B9C-5U-GsE"/>
+                            <constraint firstItem="Yza-xe-0Uo" firstAttribute="top" secondItem="g77-rO-d5X" secondAttribute="bottom" constant="8" symbolic="YES" id="SYN-w6-Tww"/>
+                            <constraint firstItem="Yza-xe-0Uo" firstAttribute="centerX" secondItem="M8W-SE-BYH" secondAttribute="centerX" id="T6C-VG-fRz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="PassCode" id="Mjb-vU-EG2"/>
                     <connections>
