@@ -17,9 +17,9 @@ public class HcdSpecialField: UIControl, UIKeyInput {
 
             if oldValue != numberOfDigits {
 
-                if passcode.characters.count > numberOfDigits {
-                    let endOfString = passcode.index(passcode.startIndex, offsetBy: numberOfDigits)
-                    passcode = passcode.substring(to: endOfString)
+                if inputNumber.characters.count > numberOfDigits {
+                    let endOfString = inputNumber.index(inputNumber.startIndex, offsetBy: numberOfDigits)
+                    inputNumber = inputNumber.substring(to: endOfString)
                 }
 
                 relayout()
@@ -29,16 +29,16 @@ public class HcdSpecialField: UIControl, UIKeyInput {
         }
     }
 
-    @IBInspectable public var passcode: String = "" {
+    @IBInspectable public var inputNumber: String = "" {
         didSet {
 
-            if oldValue != passcode {
+            if oldValue != inputNumber {
 
-                guard passcode.characters.count <= numberOfDigits else {
+                guard inputNumber.characters.count <= numberOfDigits else {
                     return
                 }
 
-                guard isNumeric(passcode) else {
+                guard isNumeric(inputNumber) else {
                     return
                 }
 
@@ -96,10 +96,17 @@ public class HcdSpecialField: UIControl, UIKeyInput {
             }
         }
     }
+    
+    @IBInspectable public var emptyDigit = "" {
+        didSet {
+            if oldValue != emptyDigit {
+                redisplay()
+            }
+        }
+    }
 
     // MARK: - Private variables
     private var numberLabels: [UILabel] = []
-    private let emptyDigit = ""
     private var isSecure = false {
         didSet {
             if isSecure != oldValue {
@@ -110,11 +117,12 @@ public class HcdSpecialField: UIControl, UIKeyInput {
 
 
     // MARK: - UIView
-    override init(frame: CGRect) {
+
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
-
+    
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -176,11 +184,11 @@ public class HcdSpecialField: UIControl, UIKeyInput {
 
             let label = numberLabels[i]
 
-            if i < passcode.characters.count {
+            if i < inputNumber.characters.count {
 
-                let start = passcode.index(passcode.startIndex, offsetBy: i)
-                let end = passcode.index(start, offsetBy: 1)
-                let number = passcode.substring(with:start..<end)
+                let start = inputNumber.index(inputNumber.startIndex, offsetBy: i)
+                let end = inputNumber.index(start, offsetBy: 1)
+                let number = inputNumber.substring(with:start..<end)
                 label.text = isSecureTextEntry ? "●" : number
                 label.textColor = textColor
                 label.backgroundColor = backColor
@@ -211,12 +219,12 @@ public class HcdSpecialField: UIControl, UIKeyInput {
 
     // MARK: UIKeyInput protocol
     public var hasText: Bool {
-        return !passcode.isEmpty
+        return !inputNumber.isEmpty
     }
 
     public func insertText(_ text: String) {
 
-        guard passcode.characters.count + text.characters.count <= numberOfDigits else {
+        guard inputNumber.characters.count + text.characters.count <= numberOfDigits else {
             return
         }
 
@@ -224,14 +232,14 @@ public class HcdSpecialField: UIControl, UIKeyInput {
             return
         }
 
-        passcode = passcode + text
+        inputNumber = inputNumber + text
     }
 
     public func deleteBackward() {
-        guard passcode.characters.count > 0 else {
+        guard inputNumber.characters.count > 0 else {
             return
         }
-        passcode = passcode.substring(to: passcode.index(before: passcode.endIndex))
+        inputNumber = inputNumber.substring(to: inputNumber.index(before: inputNumber.endIndex))
     }
 
     public var isSecureTextEntry: Bool {

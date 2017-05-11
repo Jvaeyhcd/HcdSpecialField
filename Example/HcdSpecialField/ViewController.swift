@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func passcodeFieldDidChangeValue() {
-        print(specialField.passcode)
+        print(specialField.inputNumber)
     }
 
     override func didReceiveMemoryWarning() {
