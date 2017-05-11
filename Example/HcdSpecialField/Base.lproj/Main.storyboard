@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="HcdSpecialField" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ECe-Fw-QGT">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="RedeemCodeViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ECe-Fw-QGT">
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -48,7 +48,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="HcdPassCodeFiled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MOY-K8-ITo">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="PassCodeViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MOY-K8-ITo">
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="689" y="237"/>
         </scene>
-        <!--HcdSpecialField-->
+        <!--Redeem code-->
         <scene sceneID="Biz-BG-4ql">
             <objects>
-                <viewController id="uJV-p9-JLE" customClass="HcdSepcialFieldViewController" customModule="HcdSpecialField_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uJV-p9-JLE" customClass="RedeemCodeViewController" customModule="HcdSpecialField_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DkB-vX-mtj"/>
                         <viewControllerLayoutGuide type="bottom" id="gj1-L3-hrx"/>
@@ -134,7 +134,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="HcdSpecialField" id="UHk-Y4-KfZ"/>
+                    <navigationItem key="navigationItem" title="Redeem code" id="UHk-Y4-KfZ"/>
                     <connections>
                         <outlet property="specialField" destination="Mfp-gq-5xL" id="Z6a-1G-vAk"/>
                     </connections>
@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="1440.8" y="235.23238380809596"/>
         </scene>
-        <!--HcdPassCodeFiled-->
+        <!--PassCode-->
         <scene sceneID="ASW-iy-20M">
             <objects>
-                <viewController id="5hl-Bx-E2F" customClass="HcdPassCodeFiledViewController" customModule="HcdSpecialField_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5hl-Bx-E2F" customClass="PassCodeViewController" customModule="HcdSpecialField_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mjv-VO-aAZ"/>
                         <viewControllerLayoutGuide type="bottom" id="wrF-ZO-qjc"/>
@@ -185,7 +185,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="HcdPassCodeFiled" id="Mjb-vU-EG2"/>
+                    <navigationItem key="navigationItem" title="PassCode" id="Mjb-vU-EG2"/>
                     <connections>
                         <outlet property="passCodeField" destination="Yza-xe-0Uo" id="OeD-up-Tw8"/>
                     </connections>

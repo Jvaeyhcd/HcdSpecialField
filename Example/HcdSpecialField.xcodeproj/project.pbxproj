@@ -14,8 +14,8 @@
 		BE835FC41EC1B3BA000966E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE835FC21EC1B3BA000966E5 /* LaunchScreen.storyboard */; };
 		BE886C1C1EC2A2D20077BE80 /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE886C1B1EC2A2D20077BE80 /* RootTableViewController.swift */; };
 		BE886C1E1EC2A3B10077BE80 /* MobikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE886C1D1EC2A3B10077BE80 /* MobikeViewController.swift */; };
-		BE886C231EC42BF20077BE80 /* HcdSepcialFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE886C221EC42BF20077BE80 /* HcdSepcialFieldViewController.swift */; };
-		BE886C251EC42CF50077BE80 /* HcdPassCodeFiledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE886C241EC42CF50077BE80 /* HcdPassCodeFiledViewController.swift */; };
+		BE886C231EC42BF20077BE80 /* RedeemCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE886C221EC42BF20077BE80 /* RedeemCodeViewController.swift */; };
+		BE886C251EC42CF50077BE80 /* PassCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE886C241EC42CF50077BE80 /* PassCodeViewController.swift */; };
 		BE886C281EC440630077BE80 /* scan_pic_input@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE886C271EC440630077BE80 /* scan_pic_input@3x.png */; };
 /* End PBXBuildFile section */
 
@@ -29,8 +29,8 @@
 		BE835FC51EC1B3BA000966E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE886C1B1EC2A2D20077BE80 /* RootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 		BE886C1D1EC2A3B10077BE80 /* MobikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobikeViewController.swift; sourceTree = "<group>"; };
-		BE886C221EC42BF20077BE80 /* HcdSepcialFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HcdSepcialFieldViewController.swift; sourceTree = "<group>"; };
-		BE886C241EC42CF50077BE80 /* HcdPassCodeFiledViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HcdPassCodeFiledViewController.swift; sourceTree = "<group>"; };
+		BE886C221EC42BF20077BE80 /* RedeemCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedeemCodeViewController.swift; sourceTree = "<group>"; };
+		BE886C241EC42CF50077BE80 /* PassCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassCodeViewController.swift; sourceTree = "<group>"; };
 		BE886C271EC440630077BE80 /* scan_pic_input@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan_pic_input@3x.png"; sourceTree = "<group>"; };
 		C3E86F2339E188F6FE1F02E8 /* Pods-HcdSpecialField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HcdSpecialField_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HcdSpecialField_Example/Pods-HcdSpecialField_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E3F772BEF97210A1316378A2 /* Pods_HcdSpecialField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HcdSpecialField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,8 +90,8 @@
 				BE835FB91EC1B3BA000966E5 /* AppDelegate.swift */,
 				BE886C1B1EC2A2D20077BE80 /* RootTableViewController.swift */,
 				BE886C1D1EC2A3B10077BE80 /* MobikeViewController.swift */,
-				BE886C221EC42BF20077BE80 /* HcdSepcialFieldViewController.swift */,
-				BE886C241EC42CF50077BE80 /* HcdPassCodeFiledViewController.swift */,
+				BE886C221EC42BF20077BE80 /* RedeemCodeViewController.swift */,
+				BE886C241EC42CF50077BE80 /* PassCodeViewController.swift */,
 				BE835FBD1EC1B3BA000966E5 /* Main.storyboard */,
 				BE835FC01EC1B3BA000966E5 /* Assets.xcassets */,
 				BE835FC21EC1B3BA000966E5 /* LaunchScreen.storyboard */,
@@ -234,8 +234,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE886C1E1EC2A3B10077BE80 /* MobikeViewController.swift in Sources */,
-				BE886C231EC42BF20077BE80 /* HcdSepcialFieldViewController.swift in Sources */,
-				BE886C251EC42CF50077BE80 /* HcdPassCodeFiledViewController.swift in Sources */,
+				BE886C231EC42BF20077BE80 /* RedeemCodeViewController.swift in Sources */,
+				BE886C251EC42CF50077BE80 /* PassCodeViewController.swift in Sources */,
 				BE886C1C1EC2A2D20077BE80 /* RootTableViewController.swift in Sources */,
 				BE835FBA1EC1B3BA000966E5 /* AppDelegate.swift in Sources */,
 			);

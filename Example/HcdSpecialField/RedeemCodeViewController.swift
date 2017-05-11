@@ -1,5 +1,5 @@
 //
-//  HcdPassCodeFiledViewController.swift
+//  HcdSepcialFieldViewController.swift
 //  HcdSpecialField
 //
 //  Created by Jvaeyhcd on 11/05/2017.
@@ -9,16 +9,14 @@
 import UIKit
 import HcdSpecialField
 
-class HcdPassCodeFiledViewController: UIViewController {
+class RedeemCodeViewController: UIViewController {
 
-    @IBOutlet weak var passCodeField: HcdSpecialField!
+    @IBOutlet weak var specialField: HcdSpecialField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.passCodeField.isSecureTextEntry = true
-        self.passCodeField.numberOfDigits = 4
-        self.passCodeField.becomeFirstResponder()
+        self.specialField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
