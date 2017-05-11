@@ -69,3 +69,13 @@ Open your project in Xcode from the .xcworkspace file (not the usual project fil
 ```
 $ open MyProject.xcworkspace
 ```
+
+## Contact
+If you have some suggest please post me an [issue](https://github.com/Jvaeyhcd/HcdSpecialField/issues/new).
+
+## Author
+* **Huang ChengDa** - [Jvaeyhcd](www.jvaeyhcd.cc)
+
+## LICENSE
+
+MIT License.
