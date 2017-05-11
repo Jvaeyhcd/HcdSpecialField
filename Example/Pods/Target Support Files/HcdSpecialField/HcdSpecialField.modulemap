@@ -1,0 +1,6 @@
+framework module HcdSpecialField {
+  umbrella header "HcdSpecialField-umbrella.h"
+
+  export *
+  module * { export * }
+}

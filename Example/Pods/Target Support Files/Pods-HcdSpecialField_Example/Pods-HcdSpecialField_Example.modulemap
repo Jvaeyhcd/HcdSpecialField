@@ -1,0 +1,6 @@
+framework module Pods_HcdSpecialField_Example {
+  umbrella header "Pods-HcdSpecialField_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
