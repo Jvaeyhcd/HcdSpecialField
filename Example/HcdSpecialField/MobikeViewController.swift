@@ -61,7 +61,7 @@ class MobikeViewController: UIViewController {
         self.imageView.frame = CGRect(x: 16, y: 80, width: width, height: height)
         
         self.view.addSubview(self.specialField)
-        self.specialField.frame = CGRect(x: 16, y: self.imageView.frame.maxY + 16, width: width, height: 40)
+        self.specialField.frame = CGRect(x: 16, y: self.imageView.frame.maxY + 16, width: width, height: 50)
         self.specialField.becomeFirstResponder()
         self.specialField.addTarget(self, action: #selector(specialFieldDidChangeValue), for: .valueChanged)
         
@@ -78,7 +78,7 @@ class MobikeViewController: UIViewController {
     }
     
     func specialFieldDidChangeValue() {
-        if self.specialField.inputNumber.characters.count == self.specialField.numberOfDigits {
+        if self.specialField.passcode.characters.count == self.specialField.numberOfDigits {
             self.okBtn.backgroundColor = UIColor.init(red: 0.012, green: 0.663, blue: 0.961, alpha: 1.00)
         } else {
             self.okBtn.backgroundColor = UIColor.init(red: 0.714, green: 0.714, blue: 0.714, alpha: 1.00)

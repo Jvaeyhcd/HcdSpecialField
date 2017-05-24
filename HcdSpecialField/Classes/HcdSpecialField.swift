@@ -17,9 +17,9 @@ public class HcdSpecialField: UIControl, UIKeyInput {
 
             if oldValue != numberOfDigits {
 
-                if inputNumber.characters.count > numberOfDigits {
-                    let endOfString = inputNumber.index(inputNumber.startIndex, offsetBy: numberOfDigits)
-                    inputNumber = inputNumber.substring(to: endOfString)
+                if passcode.characters.count > numberOfDigits {
+                    let endOfString = passcode.index(passcode.startIndex, offsetBy: numberOfDigits)
+                    passcode = passcode.substring(to: endOfString)
                 }
 
                 relayout()
@@ -29,16 +29,16 @@ public class HcdSpecialField: UIControl, UIKeyInput {
         }
     }
 
-    @IBInspectable public var inputNumber: String = "" {
+    @IBInspectable public var passcode: String = "" {
         didSet {
 
-            if oldValue != inputNumber {
+            if oldValue != passcode {
 
-                guard inputNumber.characters.count <= numberOfDigits else {
+                guard passcode.characters.count <= numberOfDigits else {
                     return
                 }
 
-                guard isNumeric(inputNumber) else {
+                guard isNumeric(passcode) else {
                     return
                 }
 
@@ -96,17 +96,10 @@ public class HcdSpecialField: UIControl, UIKeyInput {
             }
         }
     }
-    
-    @IBInspectable public var emptyDigit = "" {
-        didSet {
-            if oldValue != emptyDigit {
-                redisplay()
-            }
-        }
-    }
 
     // MARK: - Private variables
-    private var numberLabels: [UILabel] = []
+    private var numberLabels: [HcdSpecialLabel] = []
+    private let emptyDigit = ""
     private var isSecure = false {
         didSet {
             if isSecure != oldValue {
@@ -133,7 +126,8 @@ public class HcdSpecialField: UIControl, UIKeyInput {
         for index in 0..<numberLabels.count {
             let label = numberLabels[index]
             let frame = frameOfNumberLabel(ofDigitIndex: index)
-            label.font = UIFont.systemFont(ofSize: frame.size.width * 0.9)
+            label.label.font = UIFont.systemFont(ofSize: frame.size.width * 0.9)
+            label.label.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
             label.frame = frame
         }
 
@@ -155,10 +149,10 @@ public class HcdSpecialField: UIControl, UIKeyInput {
         numberLabels = []
 
         for _ in 0..<numberOfDigits {
-            let numberLabel = UILabel()
-            numberLabel.text = emptyDigit
-            numberLabel.textColor = dashColor
-            numberLabel.textAlignment = .center
+            let numberLabel = HcdSpecialLabel()
+            numberLabel.label.text = emptyDigit
+            numberLabel.label.textColor = dashColor
+            numberLabel.label.textAlignment = .center
             numberLabels.append(numberLabel)
             addSubview(numberLabel)
         }
@@ -184,20 +178,21 @@ public class HcdSpecialField: UIControl, UIKeyInput {
 
             let label = numberLabels[i]
 
-            if i < inputNumber.characters.count {
+            if i < passcode.characters.count {
 
-                let start = inputNumber.index(inputNumber.startIndex, offsetBy: i)
-                let end = inputNumber.index(start, offsetBy: 1)
-                let number = inputNumber.substring(with:start..<end)
-                label.text = isSecureTextEntry ? "●" : number
-                label.textColor = textColor
+                let start = passcode.index(passcode.startIndex, offsetBy: i)
+                let end = passcode.index(start, offsetBy: 1)
+                let number = passcode.substring(with:start..<end)
+                label.label.text = isSecureTextEntry ? "●" : number
+                label.label.textColor = textColor
                 label.backgroundColor = backColor
 
             } else {
 
-                label.text = emptyDigit
-                label.textColor = dashColor
+                label.label.text = emptyDigit
+                label.label.textColor = dashColor
                 label.backgroundColor = dashBackColor
+                
             }
         }
 
@@ -219,12 +214,12 @@ public class HcdSpecialField: UIControl, UIKeyInput {
 
     // MARK: UIKeyInput protocol
     public var hasText: Bool {
-        return !inputNumber.isEmpty
+        return !passcode.isEmpty
     }
 
     public func insertText(_ text: String) {
 
-        guard inputNumber.characters.count + text.characters.count <= numberOfDigits else {
+        guard passcode.characters.count + text.characters.count <= numberOfDigits else {
             return
         }
 
@@ -232,14 +227,14 @@ public class HcdSpecialField: UIControl, UIKeyInput {
             return
         }
 
-        inputNumber = inputNumber + text
+        passcode = passcode + text
     }
 
     public func deleteBackward() {
-        guard inputNumber.characters.count > 0 else {
+        guard passcode.characters.count > 0 else {
             return
         }
-        inputNumber = inputNumber.substring(to: inputNumber.index(before: inputNumber.endIndex))
+        passcode = passcode.substring(to: passcode.index(before: passcode.endIndex))
     }
 
     public var isSecureTextEntry: Bool {
