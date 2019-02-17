@@ -74,7 +74,7 @@ $ open MyProject.xcworkspace
 If you have some suggest please post me an [issue](https://github.com/Jvaeyhcd/HcdSpecialField/issues/new).
 
 ## Author
-* **Huang ChengDa** - [Jvaeyhcd](www.jvaeyhcd.cc)
+* **Huang ChengDa** - [Jvaeyhcd](https://jvaeyhcd.github.io/)
 
 ## LICENSE
 
