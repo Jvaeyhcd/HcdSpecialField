@@ -96,10 +96,18 @@ public class HcdSpecialField: UIControl, UIKeyInput {
             }
         }
     }
+    
+    
+    @IBInspectable public var emptyDigit: String = "" {
+        didSet {
+            if oldValue != emptyDigit {
+                redisplay()
+            }
+        }
+    }
 
     // MARK: - Private variables
     private var numberLabels: [HcdSpecialLabel] = []
-    private let emptyDigit = ""
     private var isSecure = false {
         didSet {
             if isSecure != oldValue {
