@@ -89,14 +89,13 @@ public class HcdSpecialField: UIControl, UIKeyInput {
         }
     }
 
-    @IBInspectable public var backColor: UIColor = UIColor.yellow {
+    @IBInspectable public var backColor: UIColor = UIColor.white {
         didSet {
             if oldValue != backColor {
                 redisplay()
             }
         }
     }
-    
     
     @IBInspectable public var emptyDigit: String = "" {
         didSet {
@@ -160,6 +159,7 @@ public class HcdSpecialField: UIControl, UIKeyInput {
             let numberLabel = HcdSpecialLabel()
             numberLabel.label.text = emptyDigit
             numberLabel.label.textColor = dashColor
+            numberLabel.label.backgroundColor = backColor
             numberLabel.label.textAlignment = .center
             numberLabels.append(numberLabel)
             addSubview(numberLabel)
@@ -193,6 +193,7 @@ public class HcdSpecialField: UIControl, UIKeyInput {
                 let number = passcode.substring(with:start..<end)
                 label.label.text = isSecureTextEntry ? "●" : number
                 label.label.textColor = textColor
+                label.label.backgroundColor = backColor
                 label.backgroundColor = backColor
 
             } else {
