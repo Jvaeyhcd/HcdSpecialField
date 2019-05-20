@@ -6,11 +6,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   HcdSpecialField:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   HcdSpecialField: 149edb958ce29fff2ec0ff67a5bbacd5fb870886
 
 PODFILE CHECKSUM: c382d359e748a9b7d84d2c483be12139fbba33a1
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.7.0.rc.1

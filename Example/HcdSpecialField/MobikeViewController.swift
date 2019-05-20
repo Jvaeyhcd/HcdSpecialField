@@ -77,7 +77,7 @@ class MobikeViewController: UIViewController {
         
     }
     
-    func specialFieldDidChangeValue() {
+    @objc func specialFieldDidChangeValue() {
         if self.specialField.passcode.characters.count == self.specialField.numberOfDigits {
             self.okBtn.backgroundColor = UIColor.init(red: 0.012, green: 0.663, blue: 0.961, alpha: 1.00)
         } else {
@@ -85,7 +85,7 @@ class MobikeViewController: UIViewController {
         }
     }
     
-    func keyboardDidShow(notification: Notification) {
+    @objc func keyboardDidShow(notification: Notification) {
         print("keyboardDidShow")
         
         let userinfo: NSDictionary = notification.userInfo! as NSDictionary

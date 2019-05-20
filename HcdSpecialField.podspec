@@ -92,6 +92,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
   s.source_files  = "HcdSpecialField/**/*.swift"
+  s.swift_version = "4.0"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
